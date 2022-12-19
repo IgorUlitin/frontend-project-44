@@ -1,11 +1,11 @@
 {
   "name": "@hexlet/code",
-  "type": "module",
   "version": "1.0.0",
-  "bin": {
-    "brain-games": "bin/brain-games.js"
-  },
   "description": "[![Actions Status](https://github.com/IgorUlitin/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/IgorUlitin/frontend-project-44/actions)",
+  "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,19 @@
   "bugs": {
     "url": "https://github.com/IgorUlitin/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/IgorUlitin/frontend-project-44#readme"
+  "type": "module",
+  "homepage": "https://github.com/IgorUlitin/frontend-project-44#readme",
+  "dependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.0",
+    "jest-cli": "^29.0.1",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-plugin-react": "^7.31.11",
+    "jest": "^29.3.1"
+  }
 }
