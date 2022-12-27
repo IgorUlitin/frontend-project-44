@@ -1,23 +1,50 @@
-import gameEngine from "../index.js";
+/* eslint-disable no-restricted-syntax */
+import gameEngine from '../index.js';
 
 // правила игры
 const gameRules = 'Find the greatest common divisor of given numbers.';
 // логика игры
 const gameLogic = () => {
-    const arrOperator = ['+', '-', '*'];
-    const operator = arrOperator[Math.floor(Math.random() * arrOperator.length)];
-    const nmb1 = Math.round(Math.random() * 20);
-    const nmb2 = Math.round(Math.random() * 10);
-    const task = (`Question: ${nmb1} ${operator} ${nmb2}`);
-    let correctAnswer;
-    if (operator === '+') {
-        correctAnswer = nmb1 + nmb2;
-      } else if (operator === '-') {
-          correctAnswer = nmb1 - nmb2;
-      } else {
-          correctAnswer = nmb1 * nmb2;
+  const nmb1 = Math.round(Math.random() * 40 + 1);
+  const nmb2 = Math.round(Math.random() * 20 + 1);
+  const task = (`Question: ${nmb1} ${nmb2}`);
+  let correctAnswer;
+  // находим НОД
+
+  const nod = () => {
+    const arr1 = [];
+    const arr2 = [];
+    // делители первого числа
+    for (let k1 = 1; k1 <= nmb1 / 2; k1 += 1) {
+      if (nmb1 % k1 === 0) {
+        arr1.push(k1);
       }
-    return [task, correctAnswer];
+    }
+    arr1.push(nmb1);
+    // делители второго числа
+    for (let k2 = 1; k2 <= nmb2 / 2; k2 += 1) {
+      if (nmb2 % k2 === 0) {
+        arr2.push(k2);
+      }
+    }
+    arr2.push(nmb2);
+    // алгоритм увеличения скорости
+    arr1.reverse();
+    arr2.reverse();
+    for (const nod1 of arr1) {
+      for (const nod2 of arr2) {
+        if (nod1 === nod2) {
+          correctAnswer = nod1;
+          return correctAnswer;
+        }
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+    }
+    return correctAnswer;
+  };
+  nod();
+  return [task, correctAnswer];
 };
-const isCount = () => gameEngine(gameRules, gameLogic);
-export default isCount;
+const isGsd = () => gameEngine(gameRules, gameLogic);
+export default isGsd;
