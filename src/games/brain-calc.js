@@ -8,7 +8,7 @@ const gameLogic = () => {
   const operator = arrOperator[Math.floor(Math.random() * arrOperator.length)];
   const nmb1 = Math.round(Math.random() * 20);
   const nmb2 = Math.round(Math.random() * 10);
-  const task = (`Question: ${nmb1} ${operator} ${nmb2}`);
+  const task = `${nmb1} ${operator} ${nmb2}`;
   let correctAnswer;
   if (operator === '+') {
     correctAnswer = nmb1 + nmb2;
