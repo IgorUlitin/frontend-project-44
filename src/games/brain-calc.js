@@ -19,5 +19,5 @@ const gameLogic = () => {
   }
   return [task, correctAnswer];
 };
-const isCount = () => gameEngine(gameRules, gameLogic);
-export default isCount;
+const isCalc = () => gameEngine(gameRules, gameLogic);
+export default isCalc;
