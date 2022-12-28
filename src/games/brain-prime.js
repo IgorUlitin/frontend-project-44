@@ -13,9 +13,6 @@ const gameLogic = () => {
   for (let i = 1; i <= task; i += 1) {
     if ((task % i) === 0) {
       arrRealDivider.push(i);
-    } else {
-      // eslint-disable-next-line no-continue
-      continue;
     }
   }
   let correctAnswer;

@@ -37,8 +37,6 @@ const gameLogic = () => {
           correctAnswer = nod1;
           return correctAnswer;
         }
-        // eslint-disable-next-line no-continue
-        continue;
       }
     }
     return correctAnswer;
