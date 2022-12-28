@@ -44,5 +44,5 @@ const gameLogic = () => {
   nod();
   return [task, correctAnswer];
 };
-const isGsd = () => gameEngine(gameRules, gameLogic);
-export default isGsd;
+const isGсd = () => gameEngine(gameRules, gameLogic);
+export default isGсd;
