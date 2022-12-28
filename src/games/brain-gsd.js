@@ -7,7 +7,7 @@ const gameRules = 'Find the greatest common divisor of given numbers.';
 const gameLogic = () => {
   const nmb1 = Math.round(Math.random() * 40 + 1);
   const nmb2 = Math.round(Math.random() * 20 + 1);
-  const task = (`Question: ${nmb1} ${nmb2}`);
+  const task = (`${nmb1} ${nmb2}`);
   let correctAnswer;
   // находим НОД
 
