@@ -1,9 +1,7 @@
-import gameEngine from '../index.js';
+import run from '../index.js';
 
-// правила игры
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-// логика игры
-const gameLogic = () => {
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const runLogic = () => {
   const task = Math.round(Math.random() * 100 + 1);
   const arrIdealDivider = [1];
   if (task !== 1) {
@@ -23,5 +21,5 @@ const gameLogic = () => {
   }
   return [task, correctAnswer];
 };
-const isPrime = () => gameEngine(gameRules, gameLogic);
+const isPrime = () => run(description, runLogic);
 export default isPrime;

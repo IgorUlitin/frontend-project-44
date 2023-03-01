@@ -1,12 +1,10 @@
-import gameEngine from '../index.js';
+import run from '../index.js';
 
-// правила игры
-const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
-// логика игры
-const gameLogic = () => {
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const runLogic = () => {
   const task = Math.round(Math.random() * 10 + 1);
   const correctAnswer = task % 2 === 0 ? 'yes' : 'no';
   return [task, correctAnswer];
 };
-const isEven = () => gameEngine(gameRules, gameLogic);
+const isEven = () => run(description, runLogic);
 export default isEven;
